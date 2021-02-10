@@ -1,5 +1,9 @@
 package com.example.codeclan.whiskytracker.components;
 
+import com.example.codeclan.whiskytracker.models.Distillery;
+import com.example.codeclan.whiskytracker.models.Whisky;
+import com.example.codeclan.whiskytracker.repositories.DistilleryRepository;
+import com.example.codeclan.whiskytracker.repositories.WhiskyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -84,5 +88,17 @@ public class DataLoader implements ApplicationRunner {
         whiskyRepository.save(whisky21);
         Whisky whisky22 = new Whisky("Carmaferg" , 18, 2018, distillery13);
         whiskyRepository.save(whisky22);
+        Whisky whisky23 = new Whisky("Captain's Reserve" , 18, 2018, distillery13);
+        whiskyRepository.save(whisky23);
+        Whisky whisky24 = new Whisky("DoubleWood", 12, 2019, distillery4);
+        whiskyRepository.save(whisky24);
+        Whisky whisky25 = new Whisky("Caribbean Cask" , 14, 2018, distillery4);
+        whiskyRepository.save(whisky25);
+        Whisky whisky26 = new Whisky("Old DoubleWood", 17, 2017, distillery4);
+        whiskyRepository.save(whisky26);
+        Distillery distillery14 = new Distillery("Jura","Island" );
+        distilleryRepository.save(distillery14);
+        Distillery distillery15 = new Distillery("Glen Garioch","Highland" );
+        distilleryRepository.save(distillery15);
     }
 }
